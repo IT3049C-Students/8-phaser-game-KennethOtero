@@ -16,9 +16,13 @@ class mainScene {
     // It will initialize our scene, like the positions of the sprites
 
     // Parameters: x position, y position, name of the sprite
-    this.player = this.physics.add.sprite(100, 100, "player");
+    let player = this.player = this.physics.add.sprite(100, 100, "player");
 
-    this.coin = this.physics.add.sprite(300, 300, "coin");
+    let coin = this.coin = this.physics.add.sprite(300, 300, "coin");
+
+    // Set worldbounds
+    player.setCollideWorldBounds(true);
+    coin.setCollideWorldBounds(true);
 
     // Store the score in a variable, initialized at 0
     this.score = 0;
